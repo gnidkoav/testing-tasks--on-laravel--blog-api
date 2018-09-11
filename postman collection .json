@@ -19,7 +19,7 @@
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -52,7 +52,7 @@
 					"response": []
 				},
 				{
-					"name": "logout",
+					"name": "destroy token",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -85,7 +85,7 @@
 					"response": []
 				},
 				{
-					"name": "refresh",
+					"name": "refresh token",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -112,39 +112,6 @@
 								"api",
 								"auth",
 								"refresh"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "me",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							}
-						],
-						"body": {},
-						"url": {
-							"raw": "{{host}}/api/auth/me",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"api",
-								"auth",
-								"me"
 							]
 						}
 					},
@@ -404,11 +371,116 @@
 		},
 		{
 			"name": "likes",
-			"item": []
+			"item": [
+				{
+					"name": "toggle a like by an article id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/api/likes/by-article/24",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"likes",
+								"by-article",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "rates",
-			"item": []
+			"item": [
+				{
+					"name": "set a rate by an article id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rate",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/rates/by-article/23",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"rates",
+								"by-article",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove a rate by an article id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/api/rates/by-article/22",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"rates",
+								"by-article",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
