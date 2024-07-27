@@ -3,13 +3,16 @@
 services:
 
     web:
+        platform: 'linux/amd64'
         build:
             context: ./
             dockerfile: ./docker/web/Dockerfile
         ports:
             - 80:80
+        networks:
+            - bnet
         volumes:
-            - .:/var/www/html
+            - ./:/var/www/html/
 
     mysql:
         platform: 'linux/amd64'
@@ -17,6 +20,10 @@ services:
         #image: 'mysql/mysql-server:5.7'  # todo: has troubles !!!
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
+        networks:
+            - bnet
+        volumes:
+            - 'mysql:/var/lib/mysql/'
         environment:
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ROOT_HOST: '%'
@@ -24,4 +31,15 @@ services:
             MYSQL_USER: '${DB_USERNAME}'
             MYSQL_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ALLOW_EMPTY_PASSWORD: 1
+
+
+networks:
+    bnet:
+        driver: bridge
+
+
+volumes:
+    mysql:
+        driver: local
+
 

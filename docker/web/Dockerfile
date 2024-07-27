@@ -12,7 +12,8 @@ RUN apt update
 
 RUN apt install -y libzip-dev  # todo: wtf ???
 
-RUN docker-php-ext-install zip mysqli pdo_mysql
+RUN docker-php-ext-install \
+    zip mysqli pdo_mysql
 
 
 RUN a2enmod rewrite
