@@ -45,9 +45,12 @@ Start the the application:
 - docker compose exec web php artisan db:seed
 
 <!-- todo: move to the Dockerfile -->
+<!--
 - docker compose cp ./docker/web/apache2/http.conf web:/etc/apache2/sites-available/000-default.conf
+- docker compose exec web ls /etc/apache2/sites-available
 - docker compose exec web cat /etc/apache2/sites-available/000-default.conf
 - docker compose restart
+-->
 
 
 ## About Laravel

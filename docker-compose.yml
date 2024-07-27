@@ -1,15 +1,11 @@
 
 
-version: '3'
-
-
 services:
 
     web:
-        build: ./docker/web
-        #build:
-        #    context: ./docker/web
-        #    dockerfile: Dockerfile
+        build:
+            context: ./
+            dockerfile: ./docker/web/Dockerfile
         ports:
             - 80:80
         volumes:
@@ -18,7 +14,7 @@ services:
     mysql:
         platform: 'linux/amd64'
         image: 'mysql:5.7'
-        #image: 'mysql/mysql-server:5.7'  # has troubles !!!
+        #image: 'mysql/mysql-server:5.7'  # todo: has troubles !!!
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
