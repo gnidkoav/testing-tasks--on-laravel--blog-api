@@ -1,12 +1,12 @@
 
 
-<p align="left">
+<p align="right">
     <a href="https://packagist.org/packages/laravel/framework">
         <img src="https://laravel.com/assets/img/components/logo-laravel.svg">
     </a>
 </p>
 
-<p align="left">
+<p align="right">
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License of Laravel">
     </a>
@@ -24,7 +24,7 @@ First of all:
 
 - stop all other services under the docker app if they up
 
-Start the the application:
+Execute the following commands in your terminal:
 
 - cd ~/Projects
 
@@ -47,4 +47,6 @@ Start the the application:
 - docker compose exec web php artisan migrate
 
 - docker compose exec web php artisan db:seed
+
+Click [here](http://localhost/) and enjoy!
 
