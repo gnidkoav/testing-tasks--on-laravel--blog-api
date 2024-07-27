@@ -10,7 +10,24 @@
 
 ## How To Run The App
 
-<!-- - docker run --rm --interactive --tty --volume $PWD:/app composer install -->
+First of all:
+(you can jump over it or preset your device other way if you understand what you're doing)
+
+- install docker desktop if it's absent
+
+- start the docker desktop application
+
+- stop all other services under the docker app if they up
+
+Start the the application:
+
+- cd ~/Projects
+
+- git clone git@github.com:gnidkoav/testing-tasks--on-laravel--blog-api.git
+
+- cd testing-tasks--on-laravel--blog-api
+
+- git checkout dockerized
 
 - cp .env.example .env
 
@@ -21,21 +38,16 @@
 - docker compose exec web php artisan key:generate
 
 - docker compose exec web php artisan jwt:secret
+(say/type "yes" to confirm)
 
-<!-- - docker compose exec web ./composer.phar dump-autoload -->
-
-- docker compose exec web php artisan migrate:status
 - docker compose exec web php artisan migrate
 
 - docker compose exec web php artisan db:seed
 
+<!-- todo: move to the Dockerfile -->
 - docker compose cp ./docker/web/apache2/http.conf web:/etc/apache2/sites-available/000-default.conf
 - docker compose exec web cat /etc/apache2/sites-available/000-default.conf
-<!-- - docker compose exec web service apache2 restart -->
-<!-- - docker compose exec web restart apache2 -->
 - docker compose restart
-
-- 
 
 
 ## About Laravel
