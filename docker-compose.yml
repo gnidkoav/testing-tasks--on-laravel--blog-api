@@ -6,7 +6,6 @@ version: '3'
 services:
 
     web:
-        #image: php:7.2-apache
         build: ./docker/web
         #build:
         #    context: ./docker/web
@@ -19,7 +18,7 @@ services:
     mysql:
         platform: 'linux/amd64'
         image: 'mysql:5.7'
-        #image: 'mysql/mysql-server:5.7'
+        #image: 'mysql/mysql-server:5.7'  # has troubles !!!
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
@@ -29,11 +28,4 @@ services:
             MYSQL_USER: '${DB_USERNAME}'
             MYSQL_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ALLOW_EMPTY_PASSWORD: 1
-#        volumes:
-#            - 'mysql:/var/lib/mysql'
-#
-#
-#volumes:
-#    mysql:
-#        driver: local
 
