@@ -7,6 +7,37 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+
+## How To Run The App
+
+<!-- - docker run --rm --interactive --tty --volume $PWD:/app composer install -->
+
+- cp .env.example .env
+
+- docker compose up -d
+
+- docker compose exec web ./composer.phar install
+
+- docker compose exec web php artisan key:generate
+
+- docker compose exec web php artisan jwt:secret
+
+<!-- - docker compose exec web ./composer.phar dump-autoload -->
+
+- docker compose exec web php artisan migrate:status
+- docker compose exec web php artisan migrate
+
+- docker compose exec web php artisan db:seed
+
+- docker compose cp ./docker/web/apache2/http.conf web:/etc/apache2/sites-available/000-default.conf
+- docker compose exec web cat /etc/apache2/sites-available/000-default.conf
+<!-- - docker compose exec web service apache2 restart -->
+<!-- - docker compose exec web restart apache2 -->
+- docker compose restart
+
+- 
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
