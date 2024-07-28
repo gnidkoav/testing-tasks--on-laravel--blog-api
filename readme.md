@@ -15,7 +15,7 @@
 
 ## How To Run The App
 
-**Instructions are in the GitHub Wiki section...**
+**Instructions are in the Wiki section of the project GitHub page**
 
-*It's so because of some historical reasons...*
+It's so because of some historical reasons
 
