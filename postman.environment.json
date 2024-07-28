@@ -1,0 +1,21 @@
+{
+	"id": "922944a8-5172-48f3-a9d9-7b91f2ed8aaa",
+	"name": "ideus",
+	"values": [
+		{
+			"key": "host",
+			"value": "http://localhost",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-07-28T18:17:14.322Z",
+	"_postman_exported_using": "Postman/11.2.34"
+}
