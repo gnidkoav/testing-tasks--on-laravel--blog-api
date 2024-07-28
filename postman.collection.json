@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "fe749a3d-c7d4-4c01-8cd7-bd11715c9020",
+		"_postman_id": "df06da5c-2b39-41f6-95f3-e3ce20e8e907",
 		"name": "ideus",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14565910"
 	},
 	"item": [
 		{
@@ -69,7 +70,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/auth/logout",
 							"host": [
@@ -102,7 +102,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/auth/refresh",
 							"host": [
@@ -132,7 +131,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/articles",
 							"host": [
@@ -141,6 +139,31 @@
 							"path": [
 								"api",
 								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all articles (second page)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/articles?page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -156,7 +179,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/articles/25",
 							"host": [
@@ -185,7 +207,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/articles/25",
 							"host": [
@@ -351,7 +372,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/comments/by-article/25",
 							"host": [
@@ -386,7 +406,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/likes/by-article/24",
 							"host": [
@@ -464,7 +483,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/api/rates/by-article/22",
 							"host": [
