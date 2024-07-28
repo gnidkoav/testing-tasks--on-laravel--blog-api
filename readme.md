@@ -1,13 +1,13 @@
 
 
 <p align="right">
-    <a href="https://packagist.org/packages/laravel/framework">
+    <a href="https://packagist.org/packages/laravel/framework" target="_blank">
         <img src="https://laravel.com/assets/img/components/logo-laravel.svg">
     </a>
 </p>
 
 <p align="right">
-    <a href="https://opensource.org/licenses/MIT">
+    <a href="https://opensource.org/licenses/MIT" target="_blank">
         <img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License of Laravel">
     </a>
 </p>
@@ -48,5 +48,5 @@ Execute the following commands in your terminal:
 
 - docker compose exec web php artisan db:seed
 
-Click [here](http://localhost/) and enjoy!
+Click <a href="http://localhost/" target="_blank">here</a> and enjoy!
 
