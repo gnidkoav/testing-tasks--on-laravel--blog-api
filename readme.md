@@ -15,7 +15,7 @@
 
 ## How To Run The App
 
-First of all:
+**First of all:**
 (you can jump over it or preset your device other way if you understand what you're doing)
 
 - install docker desktop if it's still absent on your host machine
@@ -24,29 +24,31 @@ First of all:
 
 - stop all other services under the docker app if they up
 
-Execute the following commands in your terminal:
+**Execute the following commands in your terminal:**
 
-- cd ~/Projects
+- `cd ~/Projects`
 
-- git clone git@github.com:gnidkoav/testing-tasks--on-laravel--blog-api.git
+- `git clone git@github.com:gnidkoav/testing-tasks--on-laravel--blog-api.git`
 
-- cd testing-tasks--on-laravel--blog-api
+- `cd testing-tasks--on-laravel--blog-api`
 
-- git checkout dockerized
+- `git checkout dockerized`
 
-- cp .env.example .env
+- `cp .env.example .env`
 
-- docker compose up -d
+- `docker compose up -d`
 
-- docker compose exec web ./composer.phar install
+- `docker compose exec web ./composer.phar install`
 
-- docker compose exec web php artisan key:generate
+- `docker compose exec web php artisan key:generate`
 
-- docker compose exec web php artisan jwt:secret --force
+- `docker compose exec web php artisan jwt:secret --force`
 
-- docker compose exec web php artisan migrate
+- `docker compose exec web php artisan migrate`
 
-- docker compose exec web php artisan db:seed
+- `docker compose exec web php artisan db:seed`
 
-Click <a href="http://localhost/" target="_blank">here</a> and enjoy!
+**Enjoy the service: http://localhost/**
+
+**Use the postman collection provided in the root of the project for calling API**
 
