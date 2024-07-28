@@ -17,5 +17,5 @@
 
 **Instructions are in the Wiki section of the project GitHub page**
 
-It is so because of some historical reasons
+It is so because of some historical reasons =)
 
